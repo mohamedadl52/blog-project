@@ -1,0 +1,28 @@
+
+<%- include('../partials/header'); -%>
+
+<%- include('../partials/nav'); -%>
+
+
+<div class="container mx-auto ">
+    
+<h1 class=" bg-red-500 text-white p-2 font-bold w-full mt-5"><%= event.title %></h1>
+
+<h1 class=" bg-red-500 text-white p-1 mt-2 mx-auto  w-64"><%= event.description %></h1>
+
+<h1 class=" bg-red-500 text-white p-1 mt-2 mx-auto w-64"><%= event.date.toLocaleString() %></h1>
+
+</div>
+<div class="w-full">
+    
+<div class="w-64 mt-5 m-auto">
+    <% if ((user) && (user.id == event.user_id)) { %>
+        <button class="bg-blue-500 text-white p-2 rounded ml-2 mx-auto "><a href="<%= '/event/edit/' + event.id %>">edit</a></button>
+    <button class="bg-red-500 text-white p-2 rounded ml-2 mx-auto " onclick="deleteEvent()" id="delete" data-id="<%= event.id %>" >delete</button>
+    <%}%>
+</div>
+</div>
+
+
+
+<%- include('../partials/footer'); -%>

@@ -1,0 +1,43 @@
+
+<%- include('../partials/header'); -%>
+<%- include('../partials/nav'); -%>
+
+<%- include('../partials/flashmasseges'); -%>
+
+<div>
+    <div class="div1 ml-10 relative">
+        <img class="mb-5 mt-5" src="<%= '/imgs/' + user.avatar%>" height="200px" width="200px">
+   <p class="bg-red-500 text-indigo-100 inline ml-2 p-2"><%= user.username %></p>
+
+
+   <div class="mt-5">
+       <form action="/user/uploadimg/" method="post" enctype="multipart/form-data">
+       <input type="file" name="avatar" id="avatar" onchange="readURL(this)" > <br>
+       <input type="submit" class="bg-red-800 text-indigo-100 mt-3 p-1 ml-2" value="Upload" >
+    </form>
+
+    
+    <hr>
+    <h1 class="display-4">Image Preivew</h1>
+    <img src="#" alt="" id="imagePlaceholder" height="100%" width="100%" style="display: none;">
+   </div>
+    </div>
+
+    <div>
+
+    </div>
+</div>
+<style>
+.div1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    background-color: black;
+    border-radius: 50%;
+    width: 5px;
+    height: 80vh;
+    display: block;
+}
+</style>
+<%- include('../partials/footer'); -%>

@@ -1,0 +1,19 @@
+<%- include('../partials/header'); -%>
+
+<%- include('../partials/nav'); -%>
+
+ <div class="container mx-auto w-full">
+
+   
+  <%- include('../partials/flashmasseges'); -%> 
+    <form action="/event/create" method="post" class="w-64 m-auto mt-20">
+
+        <input type="text" class="p-2 border  w-full mb-2 " name="title" id="" placeholder="add title">
+        <input type="text" class="p-2 border  w-full mb-2 " name="description" id="" placeholder="add description">
+        <input type="date" class="p-2 border  w-full mb-2 " name="date" id="" placeholder="add date">
+      <input type="submit" class="p-2 border  w-full mb-2 bg-gray-700 text-white " value="create">
+    </form>
+ </div>
+
+
+ <%- include('../partials/footer'); -%>

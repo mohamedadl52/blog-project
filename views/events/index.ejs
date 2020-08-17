@@ -1,0 +1,41 @@
+<%- include('../partials/header'); -%>
+<%- include('../partials/nav'); -%>
+
+<%- include('../partials/flashmasseges'); -%>
+
+<div class="container mx-auto flex flex-wrap ">
+<% chunk.forEach((events)=>{ %>  
+    <% events.forEach((event)=>{ %>  
+        
+        <div  style="
+        width: 350px;
+        margin: 13px;
+        "  class="border-0 w-64 bg-gray-400  h-48 border-gray-700   shadow-2xl p-3 inline-block  ">
+        <div class="text-black bg-gray-600 p-2 font-bold"><%= event.title %></div>
+        <div class="text-gray-700 w-64"> <%= event.description %>
+        </div>
+ <div class="text-gray-700 w-64 mt-16"> <%= event.date.toLocaleString() %>
+ </div>
+        <button class="bg-blue-500 p-2 text-white mb-32"><a href="<%= '/event/show/' + event.id %>"> show more</a></button>
+        </div>
+    
+            
+        <%}) %>
+    <%}) %>
+
+
+</div>
+<div>
+    <ul class=" w-64 m-auto mt-10 ">
+        <% for (let i=1 ; i <= Math.ceil(total/5); i++) {%>
+        
+          <% if (pageNo == i) {%>
+            <li class="inline active text-white p-2 font-bold  bg-gray-600"><a class="page-link" href="<%= '/event/' + i%>"><%= i%></a></li>
+          <%} else { %>
+          <li class="inline"><a class=" p-2 bg-gray-600" href="<%= '/event/' + i%>"><%= i%></a></li>
+          <%}%>
+        
+        <%}%>
+      </ul>
+</div>
+<%- include('../partials/footer'); -%>

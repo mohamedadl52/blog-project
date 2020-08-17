@@ -1,0 +1,22 @@
+
+    <div id="mySidenav" style=" top: 0; right: 0px;" class="fixed text-center  h-full md:h-auto w-0 md:static md:flex-grow z-10 bg-red-900 md:bg-transparent  md:w-64   transition-all duration-700 ease-in-out">
+
+        <ul class="text-white text-center md:inline-flex ">
+  <a href="javascript:void(0)" class=" text-black font-bold text-3xl hover:text-white text-right md:hidden " onclick="closeNav()">&times;</a>
+            <% if (user) {%>
+                
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block md:mt-0 mt-10"><a href="/event" class="  text-center hover:text-gray-600 ">home</a></li>
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block"><a href="/event/create" class="  text-center hover:text-gray-600 ">Add new Event</a></li>
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block"><a href="/user/dashboard" class="  text-center hover:text-gray-600  ">dashboard</a></li>
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block"><a href="/user/logout" class="  text-center hover:text-gray-600  ">log out</a></li>
+ 
+            <%}else{%>
+                
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block"><a href="/user/login" class="  text-center hover:text-gray-600  ">login in</a></li>     
+            <li class="mb-5 md:mb-0 md:mt-3 md:m-5 md:text-lg md:font-bold md:inline-block"><a href="/user/rejster" class="  text-center hover:text-gray-600  ">sign up</a></li>
+            <%}%>
+        </ul>
+
+    </div>
+    
+</header>

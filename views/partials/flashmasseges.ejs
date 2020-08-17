@@ -1,0 +1,20 @@
+<% if (locals.errors) {%> <% errors.forEach((err)=>{%>
+    <div class="bg-red-500 text-black p-1 w-64 m-auto mt-3">   <%= err.msg %> </div>
+<% })%> <%}%>
+
+
+<% if (locals.mss && mss != "") {%>    
+    <div class="bg-green-500 text-white text-center p-2 w-64 m-auto mt-3">   <%= mss %> </div>
+<%}%>
+
+
+
+<% if (locals.error && error != "") {%>    
+    <div class="bg-red-500 text-white text-center p-2 w-64 m-auto mt-3">   <%= error %> </div>
+<%}%>
+
+
+
+<% if (locals.scs && scs != "") {%>    
+    <div class="bg-green-500 text-white text-center p-2 w-64 m-auto mt-3">   <%= scs %> </div>
+<%}%>

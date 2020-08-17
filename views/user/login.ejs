@@ -1,0 +1,21 @@
+
+<%- include('../partials/header'); -%>
+
+<%- include('../partials/nav'); -%>
+
+
+<%- include('../partials/flashmasseges'); -%>
+
+<form action="/user/login" method="post" class="m-auto w-64 mt-12">
+    <input class="w-full p-2 border-2 shadow-lg mb-5"  type="text" name="email" placeholder=" inter your email">
+    
+    <input  class="w-full p-2 border-2 -2 shadow-lg mb-5" type="password" name="password" placeholder=" inter password">
+
+    <input type="checkbox" name="checkbox" id=""> remmber me ?  <br>
+
+    <input type="submit" value="login in" class="p-2 bg-red-600 text-white">
+
+
+</form>
+
+<%- include('../partials/footer'); -%>
